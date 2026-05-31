@@ -119,3 +119,13 @@ You can sign in with any of the seeded staff credentials (password is **`Passwor
 * **XSS Defenses:** Recursive HTML escaping sanitizes all input and output fields.
 * **Role Verification:** Base controller guards restrict workspace access based on session roles.
 * **IP-Audited Logs:** Critical events (logins, settings edits, disbursements) log user IDs and IP addresses.
+
+
+//Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+#0 C:\wamp64\www\Aidflow\app\Core\Database.php(29): App\Core\Database->__construct()
+#1 C:\wamp64\www\Aidflow\app\Core\Model.php(8): App\Core\Database::getInstance()
+#2 C:\wamp64\www\Aidflow\app\Controllers\AuthController.php(17): App\Core\Model->__construct()
+#3 C:\wamp64\www\Aidflow\app\Core\App.php(29): App\Controllers\AuthController->__construct()
+#4 C:\wamp64\www\Aidflow\index.php(53): App\Core\App->__construct()
+#5 {main}
